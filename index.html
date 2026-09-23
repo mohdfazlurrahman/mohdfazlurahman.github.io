@@ -1,205 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fazlur Rahman | Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #ffffff;
-  background: url('background.jpg') no-repeat center center/cover;
-}
+  <title>Fazlur Rahman | Portfolio</title>
 
-/* Dark overlay */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(10, 10, 30, 0.7);
-  z-index: -1;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ffffff;
+      background: url('background.jpg') no-repeat center center/cover;
+    }
 
-header {
-  text-align: center;
-  padding: 60px 20px;
-}
+    /* Dark overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10, 10, 30, 0.7);
+      z-index: -1;
+    }
 
-.profile-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #ff4ecd;
-  box-shadow: 0 0 25px #ff4ecd;
-}
+    header {
+      text-align: center;
+      padding: 60px 20px;
+    }
 
-h1 {
-  margin: 15px 0 5px;
-  font-size: 2.5rem;
-  color: #ffffff;
-}
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ff4ecd;
+      box-shadow: 0 0 25px #ff4ecd;
+    }
 
-.subtitle {
-  color: #cbd5f5;
-  font-size: 1rem;
-}
+    h1 {
+      margin: 15px 0 5px;
+      font-size: 2.5rem;
+      color: #ffffff;
+    }
 
-.info {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-}
+    .subtitle {
+      color: #cbd5f5;
+      font-size: 1rem;
+    }
 
-.info div {
-  background: rgba(255,255,255,0.08);
-  padding: 10px 20px;
-  border-radius: 10px;
-  backdrop-filter: blur(10px);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+    .info {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
 
-.info a {
-  color: #38bdf8;
-  text-decoration: none;
-}
+    .info div {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 10px 20px;
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 15px;
-}
+    .info a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
 
-nav a {
-  color: #ff4ecd;
-  text-decoration: none;
-  font-weight: bold;
-}
+    .info a:hover {
+      text-decoration: underline;
+    }
 
-section {
-  max-width: 1000px;
-  margin: auto;
-  padding: 40px 20px;
-}
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
+      flex-wrap: wrap;
+    }
 
-.card {
-  background: rgba(255,255,255,0.08);
-  padding: 20px;
-  border-radius: 12px;
-  backdrop-filter: blur(12px);
-  margin-bottom: 20px;
-}
+    nav a {
+      color: #ff4ecd;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
+    nav a:hover {
+      color: #38bdf8;
+    }
 
-.skill {
-  background: #ff4ecd;
-  padding: 8px 12px;
-  border-radius: 8px;
-  font-size: 0.9rem;
-}
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  opacity: 0.7;
-}
-</style>
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 20px;
+      border-radius: 12px;
+      backdrop-filter: blur(12px);
+      margin-bottom: 20px;
+    }
+
+    .skills,
+    .languages,
+    .interests {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      background: #ff4ecd;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      opacity: 0.7;
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <img src="profile.jpg" class="profile-img">
-  <h1>Mohammad Fazlur Rahman</h1>
-  <p class="subtitle">ECE Graduate | Aspiring AI & Data Analyst</p>
+  <header>
 
-  <div class="info">
-    <div>📧 mfrahman05@gmail.com</div>
-    <div>📞 9908132517</div>
-    <div>💼 <a href="https://www.linkedin.com/in/mohammad-fazlur-rahman-5909b5279/" target="_blank">LinkedIn Profile</a></div>
-  </div>
-</header>
+    <img src="profile.jpg" class="profile-img" alt="Fazlur Rahman">
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#projects">Projects</a>
-  <a href="#skills">Skills</a>
-</nav>
+    <h1>Mohammad Fazlur Rahman</h1>
 
-<section id="about">
-  <div class="card">
-    <h2>About Me</h2>
-    <p>
-      <p>
-        Electronics and Communication Engineering graduate with a strong foundation in electronics,
-        Vlsi, programming, and communication technologies. Passionate about both
-        Core Electronics and Information Technology, with hands-on experience in Python, SQL,
-        MATLAB, AutoCAD, Tinkercad, Siemens PLC, Keil, Proteus and Web Development.
-        A quick learner eager to solve real-world problems while continuously learning and
-        contributing in a technology-driven organization.
-</p>
+    <p class="subtitle">
+      ECE Graduate | Aspiring AI & Data Analyst
     </p>
-  </div>
-</section>
 
-<section id="projects">
-  <div class="card">
-  <h2>Academic Projects</h2>
-  
-  <p><b>AI-Based Non-Dustable Roads</b></p>
-  <ul>
-  <li>Developed an AI project focused on reducing dust pollution using sustainable road infrastructure.</li>
-  <li>Applied data analysis and problem-solving techniques.</li>
-  <li>Prepared project planning, documentation and risk management.</li>
-  </ul>
-  
-  <p><b>Portfolio Website</b></p>
-  <ul>
-  <li>Designed and developed a personal portfolio using HTML, CSS and GitHub Pages.</li>
-  <li>Showcases projects, skills and contact information.</li>
-  </ul>
-  
-  <p><b>Arduino IoT Project</b></p>
-  <ul>
-  <li>Designed IoT system architecture and workflow.</li>
-  <li>Created automation diagrams and hardware visualization.</li>
-  </ul>
-  
-  </div>
-</section>
+    <div class="info">
 
-<section id="skills">
-  <div class="card">
-<h2>Technical Skills</h2>
+      <div>📧 mfrahman05@gmail.com</div>
 
-<div class="skills">
+      <div>📞 9908132517</div>
 
-<span class="skill">Technical skills -Pyhton,C language,Verilog, SQL,
-        MATLAB, AutoCAD, Tinkercad, Siemens PLC, Keil, Proteus ,HTML and Css</span>
-<span class="skill">Git,GitHub</span>
+      <div>
+        💼
+        <a href="https://www.linkedin.com/in/mohammad-fazlur-rahman-5909b5279/"
+           target="_blank"
+           rel="noopener noreferrer">
+          LinkedIn Profile
+        </a>
+      </div>
 
-</div>
-</div>
-</section>
+    </div>
+  </header>
 
-<footer>
-  © 2026 Fazlur Rahman
-</footer>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#language">Languages</a>
+    <a href="#interests">Interests</a>
+  </nav>
+
+
+  <!-- About Section -->
+  <section id="about">
+
+    <div class="card">
+
+      <h2>About Me</h2>
+
+      <p>
+        Electronics and Communication Engineering graduate with a strong
+        foundation in electronics, VLSI, programming, and communication
+        technologies. Passionate about both Core Electronics and Information
+        Technology, with hands-on experience in Python, SQL, MATLAB, AutoCAD,
+        Tinkercad, Siemens PLC, Keil, Proteus, and Web Development.
+        A quick learner eager to solve real-world problems while continuously
+        learning and contributing to a technology-driven organization.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- Projects Section -->
+  <section id="projects">
+
+    <div class="card">
+
+      <h2>Academic Projects</h2>
+
+      <p><b>AI-Based Non-Dustable Roads</b></p>
+
+      <ul>
+        <li>
+          Developed a project focused on reducing dust pollution using
+          sustainable road infrastructure.
+        </li>
+
+        <li>
+          Applied data analysis and problem-solving techniques.
+        </li>
+
+        <li>
+          Prepared project planning, documentation, and risk management.
+        </li>
+      </ul>
+
+
+      <p><b>Portfolio Website</b></p>
+
+      <ul>
+        <li>
+          Designed and developed a personal portfolio using HTML, CSS,
+          and GitHub Pages.
+        </li>
+
+        <li>
+          Showcases projects, skills, and contact information.
+        </li>
+      </ul>
+
+
+      <p><b>Arduino IoT Project</b></p>
+
+      <ul>
+        <li>
+          Designed IoT system architecture and workflow.
+        </li>
+
+        <li>
+          Created automation diagrams and hardware visualization.
+        </li>
+      </ul>
+
+    </div>
+
+  </section>
+
+
+  <!-- Technical Skills -->
+  <section id="skills">
+
+    <div class="card">
+
+      <h2>Technical Skills</h2>
+
+      <div class="skills">
+
+        <span class="skill">Git & GitHub</span>
+        <span class="skill">Python</span>
+        <span class="skill">C</span>
+        <span class="skill">Verilog</span>
+        <span class="skill">SQL</span>
+        <span class="skill">MATLAB</span>
+        <span class="skill">AutoCAD</span>
+        <span class="skill">Tinkercad</span>
+        <span class="skill">Siemens PLC</span>
+        <span class="skill">Keil</span>
+        <span class="skill">Proteus</span>
+        <span class="skill">HTML & CSS</span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Languages -->
+  <section id="language">
+
+    <div class="card">
+
+      <h2>Languages</h2>
+
+      <div class="languages">
+
+        <span class="skill">English</span>
+        <span class="skill">Hindi</span>
+        <span class="skill">Telugu</span>
+        <span class="skill">Urdu</span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Interests -->
+  <section id="interests">
+
+    <div class="card">
+
+      <h2>Interests</h2>
+
+      <div class="interests">
+
+        <span class="skill">Emerging Technologies</span>
+        <span class="skill">Reading</span>
+        <span class="skill">Badminton</span>
+        <span class="skill">GIS</span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+    © 2026 Fazlur Rahman
+  </footer>
 
 </body>
+
 </html>
